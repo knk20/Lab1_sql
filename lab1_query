@@ -1,0 +1,3 @@
+SELECT * FROM category;
+SELECT film.film_id, film.title, film_category.category_id, category.name FROM ((film INNER JOIN file_category ON film.film_id = film_category.film_id)
+(INNER JOIN category ON film_category.category_id = category.category_id) ORDER BY category.category_id;
